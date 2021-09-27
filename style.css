@@ -1,0 +1,45 @@
+.blue-sky {
+  width: 100%;
+  height: 1000px;
+  background: skyblue top left no-repeat;
+  background-size: 100% 100%;
+  margin: auto;
+  position: relative;
+}
+
+.cloud {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  background: transparent url(image/cloud.png) 0 0 no-repeat;
+}
+
+.firstcloud {
+  animation: cloud linear 25s infinite;
+  top: 100px;
+  z-index: 100;
+}
+
+.secondcloud {
+  animation: cloud linear 35s infinite; /* animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-duration: 35s;
+  animation-timing-function: linear; */
+  top: 240px;
+  z-index: 200px;
+}
+
+.thirdcloud {
+  animation: cloud linear 45s infinite;
+  top: 200px;
+  z-index: 150px;
+}
+
+@keyframes cloud {
+  from {
+    transform: translateX(-255px);
+  }
+  to {
+    transform: translateX(1350px);
+  }
+}
