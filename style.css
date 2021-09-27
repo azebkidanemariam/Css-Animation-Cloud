@@ -1,6 +1,8 @@
 .blue-sky {
-  width: 100%;
-  height: 1000px;
+  /* width: 100%;
+  height: 1000px; */
+  width: 100vw;
+  height: 100vh;
   background: skyblue top left no-repeat;
   background-size: 100% 100%;
   margin: auto;
@@ -30,9 +32,13 @@
 }
 
 .thirdcloud {
-  animation: cloud linear 45s infinite;
+  animation: cloud linear 45s 1s infinite backwards;
   top: 200px;
   z-index: 150px;
+}
+img {
+  /* margin: 200px 20px 400px 20px; */
+  animation: slidein 8s linear;
 }
 
 @keyframes cloud {
@@ -42,4 +48,26 @@
   to {
     transform: translateX(1350px);
   }
+}
+
+@keyframes slidein {
+  0% {
+    transform: translatey(400px);
+    animation-timing-function: ease-out;
+  }
+  60% {
+    transform: translateY(-50px);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: translateY(10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes fadein {
 }
